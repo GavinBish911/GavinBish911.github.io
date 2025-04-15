@@ -5,13 +5,6 @@
 ## Introduction
 Hello, my name is Gavin Bish, and I have been pursuing a Computer Science degree at SNHU for the past two years. This GitHub Pages account serves as an electronic portfolio to showcase my work and chronicle the progress of my final project for CS-499. Completing this capstone project will mark the end of an important chapter in my academic journey, culminating in the achievement of my Bachelor’s degree in Computer Science. Through this portfolio, I aim to demonstrate the skills and knowledge I have gained during my studies, and I look forward to applying these skills to future opportunities and challenges.
 
-## Professional Self Assessment
-Over the course of my studies in the Computer Science program, I have honed my technical skills and learned how to present my work in ways that reflect my professional goals, values, and growth. Developing my ePortfolio has been a pivotal experience in showcasing my strengths and demonstrating my readiness to enter—or advance within—the field. Through ongoing coursework, I have learned to use best practices for efficiency and maintainability, refined my problem-solving approach with data structures and algorithms, and further understood the fundamentals of software engineering, databases, and security. Each step in my academic journey has been an opportunity to improve the quality of my code and to more effectively communicate the thought process behind my solutions.
-
-Although my work has largely been conducted independently, I have gained a deep appreciation for collaboration and stakeholder communication as cornerstones of professional success. Even when not in a formal team environment, I found value in inviting informal feedback and applying a rigorous self-review process to maintain objectivity. By imagining and respecting future stakeholder perspectives, I was able to design software solutions that prioritize clarity, user experience, and scalability. Moreover, integrating secure coding practices has prepared me to handle sensitive information responsibly, reflecting the broader ethical considerations of real-world computer science projects.
-
-These ePortfolio artifacts collectively represent the evolution of my expertise and illustrate how I have grown to approach tasks with a more strategic, security-conscious, and user-focused mindset. Each project has been revisited and refined to better align with the standards and best practices I have acquired throughout the program. By curating these artifacts in one cohesive collection, I aim to convey my technical abilities, my commitment to continuous improvement, and my capacity to adapt in the ever-changing landscape of computer science.
-
 ---
 
 ## Table of Contents
@@ -26,8 +19,17 @@ These ePortfolio artifacts collectively represent the evolution of my expertise 
 
 ---
 
+## Professional Self Assessment
+Over the course of my studies in the Computer Science program, I have honed my technical skills and learned how to present my work in ways that reflect my professional goals, values, and growth. Developing my ePortfolio has been a pivotal experience in showcasing my strengths and demonstrating my readiness to enter—or advance within—the field. Through ongoing coursework, I have learned to use best practices for efficiency and maintainability, refined my problem-solving approach with data structures and algorithms, and further understood the fundamentals of software engineering, databases, and security. Each step in my academic journey has been an opportunity to improve the quality of my code and to more effectively communicate the thought process behind my solutions.
+
+Although my work has largely been conducted independently, I have gained a deep appreciation for collaboration and stakeholder communication as cornerstones of professional success. Even when not in a formal team environment, I found value in inviting informal feedback and applying a rigorous self-review process to maintain objectivity. By imagining and respecting future stakeholder perspectives, I was able to design software solutions that prioritize clarity, user experience, and scalability. Moreover, integrating secure coding practices has prepared me to handle sensitive information responsibly, reflecting the broader ethical considerations of real-world computer science projects.
+
+These ePortfolio artifacts collectively represent the evolution of my expertise and illustrate how I have grown to approach tasks with a more strategic, security-conscious, and user-focused mindset. Each project has been revisited and refined to better align with the standards and best practices I have acquired throughout the program. By curating these artifacts in one cohesive collection, I aim to convey my technical abilities, my commitment to continuous improvement, and my capacity to adapt in the ever-changing landscape of computer science.
+
 ## Personal Code Review
 -This is my own personal [video](https://youtu.be/xJKR-Wp14V0) on my code reviewing how I have grown, likes, and dislikes about my old systems.
+
+---
 
 ## Projects
 
