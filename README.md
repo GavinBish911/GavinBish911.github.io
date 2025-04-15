@@ -17,7 +17,8 @@ Although I have not been working in a team environment or collaborating with sta
 3. [Unit Testing](#project-unit-testing)  
 4. [CRUD Operations](#project-crud-operations)  
 5. [Education](#education)
-6. [Work Place](#work-place)  
+6. [Work Place](#work-place)
+7. [GitHub Pages](#github-pages)
 
 ---
 
@@ -52,3 +53,6 @@ This enhancement also included refining the schema to accommodate more robust da
 
 # Work Place
 -Patt V. Mack, Inc.
+
+# GitHub Pages
+- [Pages Link](https://gavinbish911.github.io/#project-grand-strand-systems)
