@@ -54,11 +54,11 @@ Originally, this application supported only minimal lookups using unique identif
 
 2. **Install Dependencies**
    
-   - Python Example
+  - Python Example
       ```bash
       pip install -r requirements.text
       ```
-  -  It is reconmmended to use a virtual environment
+  - It is reconmmended to use a virtual environment
       ```bash
       python -m venv venv
       source venv/bin/activate   # On macOS/Linux
@@ -73,11 +73,11 @@ Originally, this application supported only minimal lookups using unique identif
    - Ensure you have configured environment variables or database connection settings as needed.
 
 4. Run the Application
-   -Python Example
+   - Python Example
       ```bash
       pythong app.py
       ```
-   -Node.js Example
+   - Node.js Example
       ```bash
       node server.js
       ```
