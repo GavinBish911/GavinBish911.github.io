@@ -8,7 +8,7 @@ This repository showcases the **first major enhancement** to our Java-based appo
 - **Integrate data persistence** for loading and saving appointments/patients to disk.
 
 ---
-Grand Strand Systems
+[Grand Strand Systems](https://github.com/GavinBish911/GavinBish911.github.io/tree/Grand-Strand-Systems/Enhanced%20Grand%20Strand%20Systems)
 ---
 
 ## Table of Contents
