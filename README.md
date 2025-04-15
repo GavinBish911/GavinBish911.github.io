@@ -118,4 +118,7 @@ Thank you for exploring Enhancement 1!
 If you have any questions or suggestions, please reach out via the Issues tab or contact the maintainer directly. Your feedback is valuable in improving the system further.
 
 ## Diffs
-- [Test](https://github.com/GavinBish911/GavinBish911.github.io/compare/Grand-Strand-Systems?expand=1#diff-cff0905156e36a45c2896571f693f40859bd1ca9c3e3627f540f7e00e80603dd)
+- [Contact](https://github.com/GavinBish911/GavinBish911.github.io/compare/Grand-Strand-Systems?expand=1#diff-cff0905156e36a45c2896571f693f40859bd1ca9c3e3627f540f7e00e80603dd)
+- [Task](https://github.com/GavinBish911/GavinBish911.github.io/compare/Grand-Strand-Systems?expand=1#diff-e6ec5369d250e613acc106d620ad13de8da5d7ba8175d3fb6f8850da48f8b5ea)
+- [Appointment Service Test](https://github.com/GavinBish911/GavinBish911.github.io/compare/Grand-Strand-Systems?expand=1#diff-72fbfbded1986ae5cd47e1dad44a2bdb9a0cca44c36fce387eb32f03c07a833f)
+- [Contact Service Test](https://github.com/GavinBish911/GavinBish911.github.io/compare/Grand-Strand-Systems?expand=1#diff-ee6e8b22cec0e4f79792e2f65a947d51fbe579382f00e703db39d7a0c14c5c62)
