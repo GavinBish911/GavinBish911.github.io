@@ -99,4 +99,40 @@ Originally, this application supported only minimal lookups using unique identif
 
 4. Reporting and Logs
    - Administrators can generate simplified logs or reports that detail appointment searches or updates, aiding in auditing and compliance.
+  
+## Project Structure
+   Enhancement1-AdvancedSearchAndPatientData/
+   ├── db/
+   │   ├── schema.sql
+   │   └── seed.sql
+   ├── src/
+   │   ├── models/
+   │   │   ├── PatientModel.py
+   │   │   └── AppointmentModel.py
+   │   ├── controllers/
+   │   │   ├── SearchController.py
+   │   │   └── PatientController.py
+   │   ├── routes/
+   │   │   └── mainRoutes.py
+   │   └── utils/
+   │       └── Validation.py
+   ├── tests/
+   │   └── test_search_functionality.py
+   ├── requirements.txt
+   └── README.md
+
+   - db: Database schemas, migrations, or seed files.
+   - src: Main source code for models, controllers, routes, and utilities.
+   - tests: Unit and integration tests for new features.
+
+## Contributing
+
+We welcome contributions! Feel free to open issues or submit pull requests:
+
+   1. Fork the repository and create a feature branch.
+   2. Commit your changes with clear and descriptive messages.
+   3. Submit a pull request outlining your modifications and their benefits.
+
+Thank you for exploring Enhancement 1!
+If you have any questions or suggestions, please reach out via the Issues tab or contact the maintainer directly. Your feedback is valuable in improving the system further.
    
