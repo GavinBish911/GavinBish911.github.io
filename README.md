@@ -1,5 +1,7 @@
 # GavinBish911.github.io
 
+---
+
 ## Introduction
 Hello, my name is Gavin Bish, and I have been pursuing a Computer Science degree at SNHU for the past two years. This GitHub Pages account serves as an electronic portfolio to showcase my work and chronicle the progress of my final project for CS-499. Completing this capstone project will mark the end of an important chapter in my academic journey, culminating in the achievement of my Bachelor’s degree in Computer Science. Through this portfolio, I aim to demonstrate the skills and knowledge I have gained during my studies, and I look forward to applying these skills to future opportunities and challenges.
 
