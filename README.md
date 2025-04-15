@@ -53,6 +53,7 @@ Originally, this application supported only minimal lookups using unique identif
    cd Enhancement1-AdvancedSearchAndPatientData
 
 2. **Install Dependencies**
+   
    - Python Example
    ```bash
    pip install -r requirements.text
@@ -66,4 +67,20 @@ Originally, this application supported only minimal lookups using unique identif
    ```
    - Other Stacks
    If you are using Node.js or another environment, please refer to the project’s documentation or your own setup instructions for installation steps
+   
+3. Configure Database
+   - Set up or update your database schema based on the provided script in the db folder.
+   - Ensure you have configured environment variables or database connection settings as needed.
+
+4. Run the Application
+   -Python Example
+      ```bash
+      pythong app.py
+      ```
+   -Node.js Example
+      ```bash
+      node server.js
+      ```
+5. Access the System
+   - Once running, navigate to http://localhost:<PORT> in your browser (replace <PORT> with the correct port number).
    
