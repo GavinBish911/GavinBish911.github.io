@@ -1,5 +1,8 @@
 # GavinBish911.github.io
 
+## Personal Code Review
+-This is my own personal [video](https://youtu.be/xJKR-Wp14V0) on my code reviewing how I have grown, likes, and dislikes about my old systems.
+
 ## Projects
 
 ### Project Grand Strand Systems
