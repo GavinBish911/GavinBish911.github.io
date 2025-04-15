@@ -17,7 +17,8 @@ This repository showcases the **first major enhancement** to our Java-based appo
 2. [Key Features](#key-features)  
 3. [Setup and Installation](#setup-and-installation)  
 4. [Usage](#usage)  
-5. [Contributing](#contributing)  
+5. [Contributing](#contributing)
+6. [Diffs](#diffs)  
 
 ---
 
@@ -115,3 +116,6 @@ We welcome contributions! Feel free to open issues or submit pull requests:
 
 Thank you for exploring Enhancement 1!
 If you have any questions or suggestions, please reach out via the Issues tab or contact the maintainer directly. Your feedback is valuable in improving the system further.
+
+## Diffs
+- [Test](https://github.com/GavinBish911/GavinBish911.github.io/compare/Grand-Strand-Systems?expand=1#diff-cff0905156e36a45c2896571f693f40859bd1ca9c3e3627f540f7e00e80603dd)
