@@ -58,11 +58,11 @@ This enhancement also included refining the schema to accommodate more robust da
 
 ---
 
-# Education
+## Education
 -Assocites Degree in Health Science
 
-# Work Place
+## Work Place
 -Patt V. Mack, Inc.
 
-# GitHub Pages
+## GitHub Pages
 - [Pages Link](https://gavinbish911.github.io/#project-grand-strand-systems)
