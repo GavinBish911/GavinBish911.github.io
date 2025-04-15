@@ -1,5 +1,5 @@
-# Enhancement 1: Advanced Search Functionality and Patient Data Improvements
-
+[# Enhancement 1: Advanced Search Functionality and Patient Data Improvements
+](https://github.com/GavinBish911/GavinBish911.github.io/tree/CRUD-Operations/CRUD%20Operations)
 This repository documents the first enhancement made to our appointment scheduling system. The goal of Enhancement 1 was to improve the system’s search capabilities and expand the patient data model, making it more robust and user-friendly for healthcare professionals and administrative staff.
 
 ---
