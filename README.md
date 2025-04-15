@@ -72,36 +72,36 @@ Previously, the system included standard CRUD methods but lacked the ability to 
 ## Usage
 
 1. Instantiate the AnimalShelter Class
-   ```bash
+   ```python
    from crud_operations_Enhanced import AnimalShelter
    shelter = AnimalShelter(username="YourUser", password="YourPass", host="YourHost", port=YourPort)
    ```
 2. Basic CRUD Operations
    - Create
-      ```bash
+      ```python
       record = {"name": "Buddy", "species": "Dog"}
       success = shelter.create(record)
       ```
    - Read
-     ```bash
+     ```python
      results = shelter.read({"species": "Dog"}, limit=10)
      ```
    - Update
-     ```bash
+     ```python
      count_updated = shelter.update({"name": "Buddy"}, {"name": "Buddy The Great"}, multiple=False)
      ```
    - Delete
-     ```bash
+     ```python
      count_deleted = shelter.delete({"name": "Buddy The Great"}, multiple=False)
      ```
 
 3. Enhanced Operations
    - Count Records
-     ```bash
+     ```python
      dog_count = shelter.count_records({"species": "Dog"})
      ```
    - Create Multiple
-     ```bash
+     ```python
      new_animals = [
         {"name": "Mittens", "species": "Cat"},
         {"name": "Rex", "species": "Dog"}
@@ -109,7 +109,7 @@ Previously, the system included standard CRUD methods but lacked the ability to 
       success, inserted_count = shelter.create_multiple(new_animals)
      ```
    - Update Multiple
-     ```bash
+     ```python
      records_to_update = [
         {"query": {"species": "Cat"}, "update_data": {"status": "Adopted"}},
         {"query": {"species": "Dog"}, "update_data": {"status": "Available"}}
@@ -117,7 +117,7 @@ Previously, the system included standard CRUD methods but lacked the ability to 
       success, updated_count = shelter.update_multiple(records_to_update)
      ```
    - Delete Multiple
-     ```bash
+     ```python
      queries_to_remove = [
         {"species": "Unicorn"},
         {"species": "Dragon"}
