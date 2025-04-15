@@ -53,12 +53,11 @@ Originally, this application supported only minimal lookups using unique identif
       cd Enhancement1-AdvancedSearchAndPatientData
 
 2. **Install Dependencies**
-   
-  - Python Example
+   - Python Example
       ```bash
       pip install -r requirements.text
       ```
-  - It is reconmmended to use a virtual environment
+    - It is reconmmended to use a virtual environment
       ```bash
       python -m venv venv
       source venv/bin/activate   # On macOS/Linux
