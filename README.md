@@ -3,6 +3,8 @@
 This repository documents the third major update to our animal management system, focusing on optimized database interactions and extended Create, Read, Update, Delete (CRUD) functionality in Python with MongoDB. Through the `AnimalShelter` class, we aim to handle higher volumes of data more efficiently, perform multiple operations in batches, and track records accurately.
 
 ---
+CRUD Operations
+---
 
 ## Table of Contents
 
