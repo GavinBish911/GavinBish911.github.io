@@ -1,105 +1,106 @@
-# Enhancement 1: Advanced Search Functionality and Patient Data Improvements
+# Enhancement 1: Advanced Search Functionality and Patient Data Linking (Java)
 
-This repository documents the first enhancement made to our appointment scheduling system. The goal of Enhancement 1 was to improve the system’s search capabilities and expand the patient data model, making it more robust and user-friendly for healthcare professionals and administrative staff.
+This repository showcases the **first major enhancement** to our Java-based appointment scheduling and contact management system. The primary goals of Enhancement 1 are:
 
----
-[Grand Strand Systems
-](https://github.com/GavinBish911/GavinBish911.github.io/tree/CRUD-Operations/CRUD%20Operations)
+- **Link appointments to specific patients** (via `patientID`), providing a more complete view of each booking.  
+- **Expand appointment details** with a *reason* field for improved scheduling context.  
+- **Add robust search capabilities** in `AppointmentService` so users can look up appointments by date, time, patient info, or reason.  
+- **Integrate data persistence** for loading and saving appointments/patients to disk.
+
 ---
 
 ## Table of Contents
-1. [Overview](#overview)
-2. [Key Features](#key-features)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Contributing](#contributing)
+
+1. [Overview](#overview)  
+2. [Key Features](#key-features)  
+3. [Setup and Installation](#setup-and-installation)  
+4. [Usage](#usage)  
+5. [Contributing](#contributing)  
 
 ---
 
 ## Overview
-Originally, this application supported only minimal lookups using unique identifiers. With Enhancement 1, the system now allows comprehensive searches by various criteria (e.g., name, date, time, phone number, and email). Additionally, we expanded the patient data model to include insurance information, contact details, and other relevant fields, resulting in a more reliable and complete patient record.
 
-**Primary Objectives:**
-- Introduce a flexible, robust search functionality for appointments.
-- Enhance the patient data model with new fields (e.g., insurance info, phone number).
-- Streamline data entry and retrieval for improved user experience.
+Previously, the application included basic classes (`Contact`, `Appointment`, `Task`, etc.) and services (e.g., `AppointmentService`, `ContactService`) for creating and managing records. However, appointments were not **fully linked** to patient data, and searching capabilities were minimal. With **Enhancement 1**, the system now:
+
+- **Associates each appointment** with a `patientID`, allowing direct lookups for appointments related to a specific person.  
+- **Introduces advanced search** logic that matches by date/time formats, partial text in description, appointment reason, or patient details (name, phone, email, insurance).  
+- **Improves data persistence** through the `DataPersistenceService`, saving/loading appointments and patients from files. This is crucial for retaining records between sessions.
+
+These improvements make the system more versatile for healthcare or administrative scenarios where scheduling requires quick lookups and cross-referencing of patient data.
 
 ---
 
 ## Key Features
 
-1. **Flexible Search Parameters**  
-   - Users can now look up appointments by name, date, time, phone number, email address, and more.
-   - This significantly reduces the time spent manually browsing through limited search results.
+1. **Patient-Linked Appointments**  
+   - `Appointment` class now contains `patientID` and `reason`, enabling more detailed scheduling.  
+   - `AppointmentService` methods updated to handle creation and editing of these new fields.
 
-2. **Extended Patient Data Model**  
-   - Added new attributes such as insurance information, contact details, and other relevant medical data.
-   - Ensures a more comprehensive view of each patient’s profile within the system.
+2. **Enhanced Search**  
+   - `searchAppointments` in `AppointmentService` can parse potential **date/time** formats, look for keywords in **descriptions** or **reasons**, and even query **patient-specific** information (e.g., phone/email).  
+   - Simplifies locating relevant appointments, especially in larger data sets.
 
-3. **Improved User Experience**  
-   - Enhanced interface for scheduling and reviewing appointment details.
-   - Clear, organized forms and search fields make data entry and retrieval easier for administrative or medical staff.
+3. **Data Persistence**  
+   - `DataPersistenceService` can **save** and **load** `appointments.dat` and `patients.dat`.  
+   - Ensures user data persists across runs, making the application suitable for real-world usage.
 
-4. **Separation of Concerns**  
-   - Back-end logic handling search and retrieval is abstracted from the front-end presentation.
-   - The codebase is now more modular, making future enhancements and maintenance smoother.
+4. **Separate Services for Contacts and Patients**  
+   - `ContactService` retains core contact functionality, while `PatientService` extends contact attributes (insurance, email, etc.).  
+   - `AppointmentService` seamlessly references the `PatientService` to enrich appointment data with patient details.
+
+5. **Backward Compatibility**  
+   - `Appointment` and `AppointmentService` preserve existing constructors and methods.  
+   - Legacy usage remains functional while new features are easily accessible.
 
 ---
 
-## Installation
+## Setup and Installation
 
 1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/YourUsername/Enhancement1-AdvancedSearchAndPatientData.git
+   cd Enhancement1-AdvancedSearchAndPatientData
+   ```
+2. **Compile the Java Files**
+   - Ensure you have Java 8+ installed
+   - From the project root directory, compile using:
       ```bash
-      git clone https://github.com/YourUsername/Enhancement1-AdvancedSearchAndPatientData.git
-      cd Enhancement1-AdvancedSearchAndPatientData
-
-2. **Install Dependencies**
-   - Python Example
-      ```bash
-      pip install -r requirements.text
+      javac Main/*.java Test/*.java
       ```
-    - It is reconmmended to use a virtual environment
-      ```bash
-      python -m venv venv
-      source venv/bin/activate   # On macOS/Linux
-      venv\Scripts\activate.text # On Windows
-      pip install -r requirements.text
-      ```
-   - Other Stacks
-   If you are using Node.js or another environment, please refer to the project’s documentation or your own setup instructions for installation steps
+    - This Command compiles all .java files in both Main and Test directories
    
-3. Configure Database
-   - Set up or update your database schema based on the provided script in the db folder.
-   - Ensure you have configured environment variables or database connection settings as needed.
+3. Run the Application
+   - Depending on your entry point (e.g., MainApplication or a test runner), run with:
+      ```bash
+      java Main.YourAppEntryPoint
+      ```
 
-4. Run the Application
-   - Python Example
+4. Run the Tests
+   - The test files (e.g., AppointmentServiceTest.java, ContactServiceTest.java) can be executed with:
+   - (assuming you have JUnit on the classpath or are using an IDE that supports JUnit.)
       ```bash
-      pythong app.py
+      java org.junit.platform.console.ConsoleLauncher --class-path . --scan-class-path
       ```
-   - Node.js Example
-      ```bash
-      node server.js
-      ```
-5. Access the System
-   - Once running, navigate to http://localhost:<PORT> in your browser (replace <PORT> with the correct port number).
 
 ## Usage
 
-1. Login and Registration
-   - Log in as an administrator or staff member using your credentials.
-   - If new, create an account or request one from an existing administrator.
-
+1. Create and Link Appointments
+   - Use AppointmentService.addAppointment to schedule new appointments. You can specify date, description, patientID, and reason.
+     
 2. Search Appointments
-   - Use the new search bar or advanced filter interface to look up appointments based on various criteria such as date, time, patient name, phone number, or email.
-   - Results are displayed in real-time, enabling quick identification and management of relevant appointments.
+   - Call AppointmentService.searchAppointments("some text or date") to look for matching records:     
+      - Date format detection (e.g., MM/dd/yyyy, yyyy-MM-dd, etc.).
+      - Times (e.g., "09:30") or partial text in descriptions or reason (e.g., "checkup").
+      - Patient-based fields, including first/last name, phone, email, or insurance (when PatientService is linked).
 
-3. View or Edit Patient Information
-   - Access extended patient profiles, which now include fields such as insurance details and multiple contact points.
-   - Update or correct patient information directly in the system, ensuring accuracy and completeness.
+4. Manage Patients and Contacts
+   - PatientService: Add, delete, update phone/email, etc.
+   - ContactService: Manage simpler contact entries, focusing on name, phone, and address.
 
-4. Reporting and Logs
-   - Administrators can generate simplified logs or reports that detail appointment searches or updates, aiding in auditing and compliance.
+5. Data Persistence
+   - When the application closes or at specific intervals, call DataPersistenceService.saveAppointments() and DataPersistenceService.savePatients() to persist your records.
+   - On startup, load them again with loadAppointments() / loadPatients().
   
 
 ## Contributing
@@ -112,4 +113,3 @@ We welcome contributions! Feel free to open issues or submit pull requests:
 
 Thank you for exploring Enhancement 1!
 If you have any questions or suggestions, please reach out via the Issues tab or contact the maintainer directly. Your feedback is valuable in improving the system further.
-   
