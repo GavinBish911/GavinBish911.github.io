@@ -4,7 +4,8 @@ This repository documents the second major update to our appointment scheduling 
 
 ---
 [Unit Testing
-](https://github.com/GavinBish911/GavinBish911.github.io/tree/Original-Unit-Testing/Enhanced%20Unit%20Testing)---
+](https://github.com/GavinBish911/GavinBish911.github.io/tree/Original-Unit-Testing/Enhanced%20Unit%20Testing)
+---
 
 ## Table of Contents
 
