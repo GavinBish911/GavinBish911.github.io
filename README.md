@@ -12,9 +12,8 @@ This repository documents the first enhancement made to our appointment scheduli
 2. [Key Features](#key-features)
 3. [Installation](#installation)
 4. [Usage](#usage)
-5. [Project Structure](#project-structure)
-6. [Contributing](#contributing)
-7. [License](#license)
+5. [Contributing](#contributing)
+6. [License](#license)
 
 ---
 
@@ -103,30 +102,6 @@ Originally, this application supported only minimal lookups using unique identif
 4. Reporting and Logs
    - Administrators can generate simplified logs or reports that detail appointment searches or updates, aiding in auditing and compliance.
   
-## Project Structure
-   Enhancement1-AdvancedSearchAndPatientData/
-   ├── db/
-   │   ├── schema.sql
-   │   └── seed.sql
-   ├── src/
-   │   ├── models/
-   │   │   ├── PatientModel.py
-   │   │   └── AppointmentModel.py
-   │   ├── controllers/
-   │   │   ├── SearchController.py
-   │   │   └── PatientController.py
-   │   ├── routes/
-   │   │   └── mainRoutes.py
-   │   └── utils/
-   │       └── Validation.py
-   ├── tests/
-   │   └── test_search_functionality.py
-   ├── requirements.txt
-   └── README.md
-
-   - db: Database schemas, migrations, or seed files.
-   - src: Main source code for models, controllers, routes, and utilities.
-   - tests: Unit and integration tests for new features.
 
 ## Contributing
 
