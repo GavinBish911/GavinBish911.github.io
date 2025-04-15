@@ -1,133 +1,131 @@
-# Enhancement 1: Advanced Search Functionality and Patient Data Improvements
+# Enhancement 3: Database Optimization and Advanced CRUD Operations (Python)
 
-This repository documents the first enhancement made to our appointment scheduling system. The goal of Enhancement 1 was to improve the system’s search capabilities and expand the patient data model, making it more robust and user-friendly for healthcare professionals and administrative staff.
+This repository documents the third major update to our animal management system, focusing on optimized database interactions and extended Create, Read, Update, Delete (CRUD) functionality in Python with MongoDB. Through the `AnimalShelter` class, we aim to handle higher volumes of data more efficiently, perform multiple operations in batches, and track records accurately.
 
----
-[CRUD Operations
-](https://github.com/GavinBish911/GavinBish911.github.io/tree/CRUD-Operations/CRUD%20Operations)
 ---
 
 ## Table of Contents
-1. [Overview](#overview)
-2. [Key Features](#key-features)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Project Structure](#project-structure)
-6. [Contributing](#contributing)
-7. [License](#license)
+
+1. [Overview](#overview)  
+2. [Key Features](#key-features)  
+3. [Setup and Installation](#setup-and-installation)  
+4. [Usage](#usage)  
+5. [Contributing](#contributing)  
 
 ---
 
 ## Overview
-Originally, this application supported only minimal lookups using unique identifiers. With Enhancement 1, the system now allows comprehensive searches by various criteria (e.g., name, date, time, phone number, and email). Additionally, we expanded the patient data model to include insurance information, contact details, and other relevant fields, resulting in a more reliable and complete patient record.
+
+Previously, the system included standard CRUD methods but lacked the ability to efficiently manage multiple records and track database usage at scale. **Enhancement 3** introduces new methods for batch insertion, bulk updates, and multi-criteria deletions, as well as record counting. These improvements are designed to support larger datasets and streamline administrative tasks such as mass updates or cleanups in the `animals` collection.
 
 **Primary Objectives:**
-- Introduce a flexible, robust search functionality for appointments.
-- Enhance the patient data model with new fields (e.g., insurance info, phone number).
-- Streamline data entry and retrieval for improved user experience.
+
+- Implement *batch* CRUD operations (insert, update, delete) to speed up workflows.  
+- Add a record-counting mechanism to facilitate reporting and data management.  
+- Provide clear exception handling and feedback for multi-record operations.
 
 ---
 
 ## Key Features
 
-1. **Flexible Search Parameters**  
-   - Users can now look up appointments by name, date, time, phone number, email address, and more.
-   - This significantly reduces the time spent manually browsing through limited search results.
+1. **Multiple Insertions (`create_multiple`)**  
+   - Inserts a list of records in a single operation.  
+   - Returns success status and count of inserted documents.
 
-2. **Extended Patient Data Model**  
-   - Added new attributes such as insurance information, contact details, and other relevant medical data.
-   - Ensures a more comprehensive view of each patient’s profile within the system.
+2. **Bulk Updates (`update_multiple`)**  
+   - Processes a list of update instructions, each containing a `query` and `update_data`.  
+   - Consolidates modifications to handle large-scale changes efficiently.
 
-3. **Improved User Experience**  
-   - Enhanced interface for scheduling and reviewing appointment details.
-   - Clear, organized forms and search fields make data entry and retrieval easier for administrative or medical staff.
+3. **Batch Deletions (`delete_multiple`)**  
+   - Removes records matching multiple query criteria in one consolidated process.  
+   - Helps perform systematic data cleanup without repeated method calls.
 
-4. **Separation of Concerns**  
-   - Back-end logic handling search and retrieval is abstracted from the front-end presentation.
-   - The codebase is now more modular, making future enhancements and maintenance smoother.
+4. **Record Counting (`count_records`)**  
+   - Quickly retrieves the total number of documents matching a given criterion.  
+   - Useful for analytics, reporting, or validating large-scale insertions and updates.
+
+5. **Error Handling and Validation**  
+   - Methods print error messages to console on exceptions, offering clearer debugging.  
+   - Includes basic checks to prevent invalid or empty data from processing.
 
 ---
 
-## Installation
+## Setup and Installation
 
-1. **Clone the Repository**  
-      ```bash
-      git clone https://github.com/YourUsername/Enhancement1-AdvancedSearchAndPatientData.git
-      cd Enhancement1-AdvancedSearchAndPatientData
-
-2. **Install Dependencies**
-   - Python Example
-      ```bash
-      pip install -r requirements.text
-      ```
-    - It is reconmmended to use a virtual environment
-      ```bash
-      python -m venv venv
-      source venv/bin/activate   # On macOS/Linux
-      venv\Scripts\activate.text # On Windows
-      pip install -r requirements.text
-      ```
-   - Other Stacks
-   If you are using Node.js or another environment, please refer to the project’s documentation or your own setup instructions for installation steps
-   
-3. Configure Database
-   - Set up or update your database schema based on the provided script in the db folder.
-   - Ensure you have configured environment variables or database connection settings as needed.
-
-4. Run the Application
-   - Python Example
-      ```bash
-      pythong app.py
-      ```
-   - Node.js Example
-      ```bash
-      node server.js
-      ```
-5. Access the System
-   - Once running, navigate to http://localhost:<PORT> in your browser (replace <PORT> with the correct port number).
+1. **Clone this Repository**  
+   ```bash
+   git clone https://github.com/YourUsername/CRUD Operations.git
+   cd CRUD Operations
+   ```
+2. **Install Python Dependencies**
+  - Ensure you have Python 3.7+ installed. Then install the required packages (e.g., pymongo)
+  - If you do not, manually install:
+       ```bash
+       pip install pymongo
+       ```
+3. Configure MongoDB
+   - Update the class constructor parameters (USER, PASS, HOST, PORT, DB, COL) if you have different credentials or a different environment.
+   - By default, it connects to a MongoDB instance named AAC with a animals collection.
 
 ## Usage
 
-1. Login and Registration
-   - Log in as an administrator or staff member using your credentials.
-   - If new, create an account or request one from an existing administrator.
+1. Instantiate the AnimalShelter Class
+   ```bash
+   from crud_operations_Enhanced import AnimalShelter
+   shelter = AnimalShelter(username="YourUser", password="YourPass", host="YourHost", port=YourPort)
+   ```
+2. Basic CRUD Operations
+   - Create
+      ```bash
+      record = {"name": "Buddy", "species": "Dog"}
+      success = shelter.create(record)
+      ```
+   - Read
+     ```bash
+     results = shelter.read({"species": "Dog"}, limit=10)
+     ```
+   - Update
+     ```bash
+     count_updated = shelter.update({"name": "Buddy"}, {"name": "Buddy The Great"}, multiple=False)
+     ```
+   - Delete
+     ```bash
+     count_deleted = shelter.delete({"name": "Buddy The Great"}, multiple=False)
+     ```
 
-2. Search Appointments
-   - Use the new search bar or advanced filter interface to look up appointments based on various criteria such as date, time, patient name, phone number, or email.
-   - Results are displayed in real-time, enabling quick identification and management of relevant appointments.
+3. Enhanced Operations
+   - Count Records
+     ```bash
+     dog_count = shelter.count_records({"species": "Dog"})
+     ```
+   - Create Multiple
+     ```bash
+     new_animals = [
+        {"name": "Mittens", "species": "Cat"},
+        {"name": "Rex", "species": "Dog"}
+      ]
+      success, inserted_count = shelter.create_multiple(new_animals)
+     ```
+   - Update Multiple
+     ```bash
+     records_to_update = [
+        {"query": {"species": "Cat"}, "update_data": {"status": "Adopted"}},
+        {"query": {"species": "Dog"}, "update_data": {"status": "Available"}}
+      ]
+      success, updated_count = shelter.update_multiple(records_to_update)
+     ```
+   - Delete Multiple
+     ```bash
+     queries_to_remove = [
+        {"species": "Unicorn"},
+        {"species": "Dragon"}
+      ]
+      success, deleted_count = shelter.delete_multiple(queries_to_remove)
+     ```
 
-3. View or Edit Patient Information
-   - Access extended patient profiles, which now include fields such as insurance details and multiple contact points.
-   - Update or correct patient information directly in the system, ensuring accuracy and completeness.
-
-4. Reporting and Logs
-   - Administrators can generate simplified logs or reports that detail appointment searches or updates, aiding in auditing and compliance.
+4. Handling Exceptions
+   - Methods that encounter MongoDB or validation errors will print diagnostic messages, guiding you toward a resolution.
   
-## Project Structure
-   Enhancement1-AdvancedSearchAndPatientData/
-   ├── db/
-   │   ├── schema.sql
-   │   └── seed.sql
-   ├── src/
-   │   ├── models/
-   │   │   ├── PatientModel.py
-   │   │   └── AppointmentModel.py
-   │   ├── controllers/
-   │   │   ├── SearchController.py
-   │   │   └── PatientController.py
-   │   ├── routes/
-   │   │   └── mainRoutes.py
-   │   └── utils/
-   │       └── Validation.py
-   ├── tests/
-   │   └── test_search_functionality.py
-   ├── requirements.txt
-   └── README.md
-
-   - db: Database schemas, migrations, or seed files.
-   - src: Main source code for models, controllers, routes, and utilities.
-   - tests: Unit and integration tests for new features.
-
 ## Contributing
 
 We welcome contributions! Feel free to open issues or submit pull requests:
@@ -136,6 +134,5 @@ We welcome contributions! Feel free to open issues or submit pull requests:
    2. Commit your changes with clear and descriptive messages.
    3. Submit a pull request outlining your modifications and their benefits.
 
-Thank you for exploring Enhancement 1!
+Thank you for exploring Enhancement 2!
 If you have any questions or suggestions, please reach out via the Issues tab or contact the maintainer directly. Your feedback is valuable in improving the system further.
-   
