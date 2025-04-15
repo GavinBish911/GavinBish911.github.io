@@ -1,6 +1,6 @@
-# Enhancement 2: Comprehensive Unit Testing and Algorithm Refinement
+# Enhancement 2: Comprehensive Unit Testing and Algorithm Refinement (C++)
 
-This repository documents the second major update to our appointment scheduling system, with a primary focus on strengthening reliability and maintainability. By introducing robust unit tests and refining the core algorithms, this enhancement ensures the application can handle various edge cases, maintain performance under load, and adapt to future expansions with minimal disruption.
+This repository documents the second major update to our appointment scheduling and security system, focusing on robust **C++** unit testing (using **Google Test**) and refining core algorithms. The goal is to ensure that new features can be introduced with minimal risk of breaking existing functionality, while simultaneously optimizing security operations (like threat detection and sanitization).
 
 ---
 
@@ -8,7 +8,7 @@ This repository documents the second major update to our appointment scheduling 
 
 1. [Overview](#overview)  
 2. [Key Features](#key-features)  
-3. [Installation](#installation)  
+3. [Project Setup](#project-setup)  
 4. [Usage](#usage)  
 5. [Contributing](#contributing)  
 
@@ -16,91 +16,94 @@ This repository documents the second major update to our appointment scheduling 
 
 ## Overview
 
-Prior to this update, the system had limited testing coverage, making it difficult to guarantee that new features did not introduce regressions. Additionally, certain data-processing algorithms were due for optimization to improve performance and readability. This enhancement provides an extensive suite of unit tests, focuses on algorithmic refinements in scheduling and data handling, and improves overall code clarity.
+Prior to this enhancement, the project had limited visibility into potential regressions whenever new code was added. It also contained security routines (e.g., `ThreatDetector`, `SecuritySanitizer`) that needed more rigorous testing. By implementing **Google Test**-based unit tests and improving the internal algorithms, Enhancement 2 ensures stable performance, concurrency safety, and better handling of malicious inputs.
 
 **Primary Objectives:**
-- Achieve thorough unit testing coverage across all core modules.
-- Streamline algorithms for handling appointments, data queries, and concurrency scenarios.
-- Enhance readability and maintainability of the codebase.
+
+- Achieve thorough **C++** unit testing coverage across all core classes (e.g., `ThreatDetector`, `SecuritySanitizer`, `SecurityLogger`, `SecureResource`).
+- Refine security algorithms to handle malicious inputs, concurrency, and potential resource exhaustion more effectively.
+- Provide a well-documented testing workflow for developers and maintainers.
 
 ---
 
 ## Key Features
 
-1. **Robust Unit Testing**  
-   - Comprehensive test suite covering appointment scheduling, data management, and critical utility functions.  
-   - Clear documentation on test results, ensuring contributors can quickly identify issues.
+1. **Google Test Integration**  
+   - Comprehensive test suite verifying threat detection, sanitization, and resource handling.  
+   - Structured test fixtures (`TEST_F` classes) for concurrency and stress scenarios.
 
-2. **Algorithmic Improvements**  
-   - Refined data structures to handle larger volumes of appointment data.  
-   - Optimized scheduling logic for faster performance and greater accuracy under high loads.
+2. **Algorithmic Refinements**  
+   - Enhanced detection patterns for SQL injection, XSS, and command execution attempts.  
+   - Optimized concurrency and resource locking via C++ standard library mutexes.
 
-3. **Improved Error Handling**  
-   - Enhanced exception catching and error messages for invalid or conflicting data inputs.  
-   - Simplified troubleshooting with clearer logging and debug outputs.
+3. **Secure Logging**  
+   - Centralized logging of security-relevant events (e.g., detected threats) with basic encryption.  
+   - Thread-safe operations that can handle simultaneous logging from multiple classes.
 
-4. **Codebase Maintenance**  
-   - Removed redundant or outdated functions to reduce technical debt.  
-   - Reorganized modules, establishing a logical structure that eases future development.
+4. **Improved Maintainability**  
+   - Clear separation of concerns among classes handling threat detection, logging, and sanitization.  
+   - Simplified error messages and resource release logic to reduce code complexity.
 
 ---
 
-## Installation
+## Project Setup
 
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/YourUsername/Enhancement2-UnitTestingAndAlgorithmRefinement.git
-   cd Enhancement2-UnitTestingAndAlgorithmRefinement
+   git clone https://github.com/YourUsername/Enhancement2-CppUnitTesting.git
+   cd Enhancement2-CppUnitTesting
    ```
    
-2. **Install Dependencies**
-   - Python Example
+2. **Install Google Test**
+   - Option A (System Install)
       ```bash
-      pip install -r requirements.text
+      sudo apt-get update
+      sudo apt-get install libgtest-dev
       ```
-    - It is reconmmended to use a virtual environment
+    - Then build the Google Test library from source (if required):
       ```bash
-      python -m venv venv
-      source venv/bin/activate   # On macOS/Linux
-      venv\Scripts\activate.text # On Windows
-      pip install -r requirements.text
+      cd /usr/src/gtest
+      sudo cmake .
+      sudo make
+      sudo cp *.a /usr/lib
       ```
-   - Other Stacks
-   If you are using Node.js or another environment, please refer to the project’s documentation or your own setup instructions for installation steps
+   - Option B (FetchContent/CMake):
+   If using CMake, you can fetch and integrate Google Test directly in your build process.
    
-3. Configure Database
-   - If database changes are included, run any provided scripts (e.g., db/schema.sql) to update or initialize the database.
-   - Set environment variables or adjust configuration files as needed.
+3. Build the Project
+   - CMake Example:
+      ```bash
+      mkdir build && cd build
+      cmake ..
+      make
+      ```
 
-4. Run the Application
-   - Python Example
+4. Run the Tests
+   - Once compiled, an executable (e.g., testSuite) will be created in the build directory.
+   - Execute the tests:
       ```bash
-      pythong app.py
+      ./testSuite
       ```
-   - Node.js Example
-      ```bash
-      node server.js
-      ```
-5. Run the Test
-   - Python (pytest) Example
-   - Node.js (Jest or
 
 ## Usage
 
-1. Login and Registration
-   - Log in as an administrator or staff member using your credentials.
-   - If new, create an account or request one from an existing administrator.
+1. Core Security Classes
+   - ThreatDetector: Identifies attack patterns such as SQL injection and XSS.
+   - SecuritySanitizer: Removes dangerous characters and salts user input.
+   - SecurityLogger: Logs security events with simple XOR encryption.
+   - SecureResource<T>: Manages thread-safe access to resources using smart pointers.
 
-2. Search Appointments
-   - Use the new search bar or advanced filter interface to look up appointments based on various criteria such as date, time, patient name, phone number, or email.
-   - Results are displayed in real-time, enabling quick identification and management of relevant appointments.
+2. Test Execution
+   - The Google Test suite checks scenarios like malicious input detection, sanitization effectiveness, concurrency handling, and resource exhaustion prevention.
+   - View the console output to see which tests passed or failed, along with any custom failure messages.
 
 3. View or Edit Patient Information
    - Access extended patient profiles, which now include fields such as insurance details and multiple contact points.
    - Update or correct patient information directly in the system, ensuring accuracy and completeness.
 
-4. Reporting and Logs
-   - Administrators can generate simplified logs or reports that detail appointment searches or updates, aiding in auditing and compliance.
+4. Extending the Tests
+   - Add new test cases in the test.cpp file or create additional test files.
+   - Follow the existing fixture approach (CollectionTest) for consistent concurrency and environment setup.
   
 
 ## Contributing
@@ -111,5 +114,5 @@ We welcome contributions! Feel free to open issues or submit pull requests:
    2. Commit your changes with clear and descriptive messages.
    3. Submit a pull request outlining your modifications and their benefits.
 
-Thank you for exploring Enhancement 1!
+Thank you for exploring Enhancement 2!
 If you have any questions or suggestions, please reach out via the Issues tab or contact the maintainer directly. Your feedback is valuable in improving the system further.
