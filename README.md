@@ -3,6 +3,8 @@
 This repository documents the second major update to our appointment scheduling and security system, focusing on robust **C++** unit testing (using **Google Test**) and refining core algorithms. The goal is to ensure that new features can be introduced with minimal risk of breaking existing functionality, while simultaneously optimizing security operations (like threat detection and sanitization).
 
 ---
+Unit Testing
+---
 
 ## Table of Contents
 
