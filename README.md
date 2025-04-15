@@ -21,6 +21,11 @@ This repository showcases the **first major enhancement** to our Java-based appo
 
 ---
 
+```
+git status
+git diff
+```
+
 ## Overview
 
 Previously, the application included basic classes (`Contact`, `Appointment`, `Task`, etc.) and services (e.g., `AppointmentService`, `ContactService`) for creating and managing records. However, appointments were not **fully linked** to patient data, and searching capabilities were minimal. With **Enhancement 1**, the system now:
