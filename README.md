@@ -82,4 +82,21 @@ Originally, this application supported only minimal lookups using unique identif
       ```
 5. Access the System
    - Once running, navigate to http://localhost:<PORT> in your browser (replace <PORT> with the correct port number).
+
+## Usage
+
+1. Login and Registration
+   - Log in as an administrator or staff member using your credentials.
+   - If new, create an account or request one from an existing administrator.
+
+2. Search Appointments
+   - Use the new search bar or advanced filter interface to look up appointments based on various criteria such as date, time, patient name, phone number, or email.
+   - Results are displayed in real-time, enabling quick identification and management of relevant appointments.
+
+3. View or Edit Patient Information
+   - Access extended patient profiles, which now include fields such as insurance details and multiple contact points.
+   - Update or correct patient information directly in the system, ensuring accuracy and completeness.
+
+4. Reporting and Logs
+   - Administrators can generate simplified logs or reports that detail appointment searches or updates, aiding in auditing and compliance.
    
