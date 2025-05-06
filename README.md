@@ -64,6 +64,7 @@ This enhancement also included refining the schema to accommodate more robust da
 
 ## Education
 -Assocites Degree in Health Science
+
 -Bachelors Degree in Computer Science with Concentration in Software Engineering
 
 ## Work Place
