@@ -1,74 +1,113 @@
-# GavinBish911.github.io
+---
+layout: default
+title: Gavin Bish | Software Engineer & Computer Science Portfolio
+---
+
+# Gavin Bish  
+**Software Engineer | Computer Science Graduate | Full-Stack & Systems Development**
 
 ---
 
 ## Introduction
-Hello, my name is Gavin Bish, and I have been pursuing a Computer Science degree at SNHU for the past two years. This GitHub Pages account serves as an electronic portfolio to showcase my work and chronicle the progress of my final project for CS-499. Completing this capstone project will mark the end of an important chapter in my academic journey, culminating in the achievement of my Bachelor’s degree in Computer Science. Through this portfolio, I aim to demonstrate the skills and knowledge I have gained during my studies, and I look forward to applying these skills to future opportunities and challenges.
+
+Welcome to my professional portfolio. My name is **Gavin Bish**, and I am a Computer Science graduate with a strong focus on software engineering, system design, and full-stack development. This GitHub Pages site serves as a curated showcase of my academic work, technical growth, and applied problem-solving throughout my undergraduate program at Southern New Hampshire University.
+
+This portfolio represents the culmination of my **CS-499 Capstone** and highlights the evolution of my skills across software architecture, data management, testing, and secure system design. Each artifact included here reflects deliberate iteration, technical refinement, and adherence to industry best practices. My goal is to demonstrate not only what I built, but *how* and *why* I built it—emphasizing maintainability, scalability, and thoughtful engineering decisions.
 
 ---
 
 ## Table of Contents
 
-1. [Personal Code Review](#personal-code-review)  
-2. [Grand Strand Systems](#project-grand-strand-systems)  
-3. [Unit Testing](#project-unit-testing)  
-4. [CRUD Operations](#project-crud-operations)  
-5. [Education](#education)
-6. [Work Place](#work-place)
-7. [GitHub Pages](#github-pages)
+1. [Professional Self-Assessment](#professional-self-assessment)  
+2. [Code Review Video](#personal-code-review)  
+3. [Project: Grand Strand Systems](#project-grand-strand-systems)  
+4. [Project: Unit Testing Enhancements](#project-unit-testing)  
+5. [Project: CRUD Operations](#project-crud-operations)  
+6. [Education](#education)  
+7. [Professional Experience](#work-place)  
+8. [GitHub Pages Deployment](#github-pages)  
 
 ---
 
-## Professional Self Assessment
-Over the course of my studies in the Computer Science program, I have honed my technical skills and learned how to present my work in ways that reflect my professional goals, values, and growth. Developing my ePortfolio has been a pivotal experience in showcasing my strengths and demonstrating my readiness to enter—or advance within—the field. Through ongoing coursework, I have learned to use best practices for efficiency and maintainability, refined my problem-solving approach with data structures and algorithms, and further understood the fundamentals of software engineering, databases, and security. Each step in my academic journey has been an opportunity to improve the quality of my code and to more effectively communicate the thought process behind my solutions.
+## Professional Self-Assessment
 
-Although my work has largely been conducted independently, I have gained a deep appreciation for collaboration and stakeholder communication as cornerstones of professional success. Even when not in a formal team environment, I found value in inviting informal feedback and applying a rigorous self-review process to maintain objectivity. By imagining and respecting future stakeholder perspectives, I was able to design software solutions that prioritize clarity, user experience, and scalability. Moreover, integrating secure coding practices has prepared me to handle sensitive information responsibly, reflecting the broader ethical considerations of real-world computer science projects.
+Throughout my academic journey, I have developed a strong foundation in software engineering principles, system architecture, and secure development practices. My coursework and applied projects have strengthened my ability to design maintainable systems, write clean and testable code, and approach problem-solving with a structured and analytical mindset.
 
-These ePortfolio artifacts collectively represent the evolution of my expertise and illustrate how I have grown to approach tasks with a more strategic, security-conscious, and user-focused mindset. Each project has been revisited and refined to better align with the standards and best practices I have acquired throughout the program. By curating these artifacts in one cohesive collection, I aim to convey my technical abilities, my commitment to continuous improvement, and my capacity to adapt in the ever-changing landscape of computer science.
+A significant part of my growth has come from refining how I evaluate my own work. Rather than focusing solely on implementation, I have learned to assess performance, scalability, and long-term maintainability. This shift has influenced how I approach software design—placing greater emphasis on documentation, modularity, and future extensibility.
+
+Although much of my academic work was completed independently, I consistently approached each project as if it were part of a collaborative development environment. This meant writing readable code, anticipating future contributors, and considering real-world user and stakeholder needs. Through this process, I strengthened my ability to communicate technical decisions clearly and to align software solutions with practical objectives.
+
+Together, the projects presented here demonstrate my readiness to contribute meaningfully to professional software development teams and to continue growing as an engineer committed to quality, reliability, and continuous learning.
+
+---
 
 ## Personal Code Review
--This is my own personal [video](https://youtu.be/xJKR-Wp14V0) on my code reviewing how I have grown, likes, and dislikes about my old systems.
+
+To complement the written artifacts in this portfolio, I recorded a personal code review discussing my development process, architectural decisions, and lessons learned throughout the project lifecycle.
+
+📺 **Video:**  
+[Personal Code Review – YouTube](https://youtu.be/xJKR-Wp14V0)
+
+This review provides insight into how my coding practices evolved over time, the challenges I encountered, and the improvements I made to enhance maintainability, readability, and overall system design.
 
 ---
 
-## Projects
+## Project: Grand Strand Systems
+
+For the first major enhancement, I focused on expanding and refining an existing appointment management system. The original implementation supported only limited record lookup functionality. To improve usability and realism, I redesigned the system to support flexible search capabilities across multiple attributes, including patient name, appointment date, contact information, and identifiers.
+
+In addition, I expanded the underlying data model to include richer patient records such as insurance details, contact metadata, and extended demographic information. These enhancements significantly improved data organization and usability, transforming the application into a more scalable and practical solution suitable for real-world clinical or administrative environments.
+
+🔗 **Project Repository:**  
+[Grand Strand Systems](https://github.com/GavinBish911/GavinBish911.github.io/blob/Grand-Strand-Systems/README.md)
 
 ---
 
-### Project Grand Strand Systems
--For this first enhancement, I focused on significantly improving the existing appointment scheduling system by adding more robust search capabilities and extending patient information fields. Originally, the application only supported minimal lookups based on unique identifiers. In this enhancement, I introduced flexible search parameters that let users find appointments or patient records by name, date, time, phone number, email address, and more. This change drastically improves the efficiency and user experience when managing multiple appointments.
+## Project: Unit Testing Enhancements
 
-Additionally, I updated the patient data model to include important fields such as insurance information, contact details, and other key attributes. This improvement ensures that users can maintain a comprehensive patient record while streamlining the flow of information. Overall, Enhancement 1 transforms the system into a more practical and user-friendly platform that better serves medical or administrative staff looking to organize and retrieve appointment and patient data quickly.
+The second enhancement focused on improving software reliability through comprehensive unit testing and algorithmic validation. Prior to this phase, the system lacked sufficient automated test coverage, increasing the risk of regressions and undetected defects.
 
--[Grand Strand Systems](https://github.com/GavinBish911/GavinBish911.github.io/blob/Grand-Strand-Systems/README.md)
+I designed and implemented structured unit tests covering core logic, data handling routines, and edge cases. In parallel, I reviewed existing algorithms to ensure efficiency, clarity, and correctness. This process not only improved system stability but also reinforced best practices for test-driven development and long-term maintainability.
 
----
-
-### Project Unit Testing
--For the second enhancement, I focused on strengthening the reliability and maintainability of the system through comprehensive unit testing and algorithmic refinements. Prior to this effort, the application only had basic or minimal coverage, making it difficult to ensure that newly added features worked correctly or that existing features remained stable. By introducing a robust suite of tests for all critical functions and data-handling routines, I significantly boosted code confidence.
-
-This enhancement also included revisiting core algorithms used throughout the project—particularly those handling data processing, lookups, and scheduling logic—to confirm efficiency and accuracy. In the process, I refactored segments that could benefit from improved data structures or logic flow, which further optimized performance. Ultimately, Enhancement 2 ensures that updates and future expansions can be integrated seamlessly, reducing the likelihood of regressions while helping maintain a high-quality codebase.
-
--[Unit Testing](https://github.com/GavinBish911/GavinBish911.github.io/blob/Unit-Testing/README.md)
+🔗 **Project Repository:**  
+[Unit Testing Enhancements](https://github.com/GavinBish911/GavinBish911.github.io/blob/Unit-Testing/README.md)
 
 ---
 
-### Project CRUD Operations
--For the third enhancement, I turned my attention to strengthening the system’s database layer. While the application already supported basic Create, Read, Update, and Delete (CRUD) methods, this enhancement refined those operations to improve efficiency, data integrity, and security. Specifically, I introduced optimized queries and indexing to handle large data sets more effectively, reducing query times and enhancing overall performance. Additionally, I implemented concurrency checks to prevent conflicts when multiple users access or modify the database simultaneously.
+## Project: CRUD Operations
 
-This enhancement also included refining the schema to accommodate more robust data relationships and employing best practices for data validation at the database level. These measures collectively ensure that the application can scale and maintain consistent, accurate records. As a result, Enhancement 3 provides a more dependable and high-performing data foundation for any future features, further solidifying the overall reliability and professionalism of the project.
+The third enhancement focused on strengthening the system’s data persistence layer. While basic Create, Read, Update, and Delete operations were already functional, I refined these processes to improve performance, reliability, and data integrity.
 
--[CRUD Operations](https://github.com/GavinBish911/GavinBish911.github.io/blob/CRUD-Operations/README.md)
+Key improvements included optimized query logic, stronger validation mechanisms, and better handling of concurrent access scenarios. I also refined the underlying schema to better support scalability and future feature expansion. These updates ensure the system can reliably manage growing datasets while maintaining consistency and accuracy.
+
+🔗 **Project Repository:**  
+[CRUD Operations](https://github.com/GavinBish911/GavinBish911.github.io/blob/CRUD-Operations/README.md)
 
 ---
 
 ## Education
--Assocites Degree in Health Science
 
--Bachelors Degree in Computer Science with Concentration in Software Engineering
+- **Associate of Science in Health Science**  
+- **Bachelor of Science in Computer Science**  
+  *Concentration: Software Engineering*
 
-## Work Place
--Patt V. Mack, Inc.
+---
 
-## GitHub Pages
-- [Pages Link](https://gavinbish911.github.io/#project-grand-strand-systems)
+## Work Experience
+
+**Pat V. Mack, Inc.**  
+Software Engineering / Technical Development  
+*(Details available upon request or via résumé)*
+
+---
+
+## GitHub Pages Deployment
+
+This portfolio is hosted using GitHub Pages and serves as a centralized showcase of my academic and technical work.
+
+🔗 **Live Site:**  
+[https://gavinbish911.github.io](https://gavinbish911.github.io)
+
+---
+
+*Thank you for taking the time to review my work. I welcome opportunities for collaboration, feedback, and professional growth.*
